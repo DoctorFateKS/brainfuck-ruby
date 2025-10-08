@@ -10,4 +10,7 @@ if __FILE__ == $0
       exit
     end
   end
+
+  parser.parse!
+  brainfuck_file = ARGV[0]
 end

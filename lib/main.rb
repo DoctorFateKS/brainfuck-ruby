@@ -1,16 +1,15 @@
+# frozen_string_literal: true
+
 require 'optparse'
+require_relative 'brainfuck'
 
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
+
   options = {}
+  OptionParser.new do |opts|
+    opts.banner = 'Usage: ruby main.rb <brainfuck_file>'
+  end.parse!(into: options)
 
-  parser = OptionParser.new do |opts|
-    opts.banner = 'Usage: ruby main.rb [brainfuck_file]'
-    opts.on('-h', '--help', 'Show this help message') do
-      puts opts
-      exit
-    end
-  end
-
-  parser.parse!
-  brainfuck_file = ARGV[0]
+  brainfuck_file = ARGV.first
+  Brainfuck.new(brainfuck_file).execute
 end

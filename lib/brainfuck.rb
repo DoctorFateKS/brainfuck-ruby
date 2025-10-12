@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
+# This class regroups methods to interprets the Brainfuck code in a brainfuck file
 class Brainfuck
   def initialize(file_name)
     # Open the brainfuck file, read his content and store it in an instance variable
-    @source_code = File.open(file_name, 'r')
+    @source_code = File.read(file_name)
   end
 
   def execute
@@ -32,13 +33,9 @@ class Brainfuck
         input_char = $stdin.getc
         cells[cell_index] = clamp0_255_wraparound(input_char ? input_char.ord : 0)
       when '['
-        if cells[cell_index] == 0
-          instruction_index = find_bracket_match(instruction_index, true)
-        end
+        instruction_index = find_bracket_match(instruction_index, true) if cells[cell_index].zero?
       when ']'
-        unless cells[cell_index] == 0
-          instruction_index = find_bracket_match(instruction_index, true)
-        end
+        instruction_index = find_bracket_match(instruction_index, false) unless cells[cell_index].zero?
       end
 
       instruction_index += 1
@@ -46,7 +43,7 @@ class Brainfuck
   end
 
   private
-  
+
   # Find the location of the corresponding bracket to the one at *start*
   # If forward is true go to the right looking for a matching "]"
   # Otherwise do the reverse
@@ -60,7 +57,7 @@ class Brainfuck
     while location >= 0 && location < @source_code.length
       char = @source_code[location]
       if char == end_bracket
-        return location if in_between_brackets == 0
+        return location if in_between_brackets.zero?
 
         in_between_brackets -= 1
       elsif char == start_bracket
@@ -79,7 +76,7 @@ class Brainfuck
   def clamp0_255_wraparound(num)
     if num > 255
       0
-    elsif num < 0
+    elsif num.negative?
       255
     else
       num

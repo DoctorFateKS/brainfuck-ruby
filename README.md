@@ -4,7 +4,7 @@
 
 <h1 align="center">Brainfuck-Ruby</h1>
 <p align="center">
-  <i>A simple Brainfuck interpreter implemented in Ruby</i><br>
+  <i>One Brainfuck file. One command. One output.</i><br>
 </p>
 
 <p align="center">
@@ -13,3 +13,28 @@
   <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNzOHFnazB5NDdlNWh5NjNrbGYxejg0ODhtYWphMm5qeGZweWdyMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/w8ZwcflDnA4kKJyMJq/giphy.gif" alt="brain-gif3" width=200px>
   <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXFrdW51eXhpdmp5Z3dyNTB0bW12emZneXRpaDZyeWRsMGx0b2E4aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/iQuwUsRiOmT4tZpRmQ/giphy.gif" alt="brain-gif4" width=200px>
 </p>
+
+---
+
+- [About](https://github.com/DoctorFateKS/brainfuck-ruby/main/README.md#about)
+- [Features](https://github.com/DoctorFateKS/brainfuck-ruby/main/README.md#features)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Tech Stack](#-tech_stack)
+- [Next Steps](#-next_steps)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Aknowledgements](#-aknowledgements)
+
+---
+
+### About
+
+Brainfuck-Ruby is an interpreter implemented in Ruby.
+
+---
+
+### Features
+
+- 
+

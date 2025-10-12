@@ -36,5 +36,36 @@ Brainfuck-Ruby is an interpreter implemented in Ruby.
 
 ### Features
 
-- 
+-
+-
+-
+-
 
+---
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/DoctorFateKS/brainfuck-ruby.git
+
+# Go into the project folder
+cd brainfuck-ruby
+```
+
+---
+
+### Usage
+
+```bash
+# Run the script with a brainfuck file
+ruby main.rb <brainfuck_file>
+```
+
+---
+
+### Tech Stack
+
+- Ruby
+- Brainfuck
+- RSpec

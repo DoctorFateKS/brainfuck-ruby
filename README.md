@@ -16,15 +16,15 @@
 
 ---
 
-- [About](https://github.com/DoctorFateKS/brainfuck-ruby/main/README.md#about)
-- [Features](https://github.com/DoctorFateKS/brainfuck-ruby/main/README.md#features)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Tech Stack](#-tech_stack)
-- [Next Steps](#-next_steps)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Aknowledgements](#-aknowledgements)
+- [About](#about)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tech Stack](#tech-stack)
+- [Next Steps](#next-steps)
+- [Contributing](#contributing)
+- [License](#license)
+- [Aknowledgements](#aknowledgements)
 
 ---
 

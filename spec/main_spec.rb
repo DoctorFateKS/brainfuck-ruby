@@ -7,10 +7,10 @@ RSpec.describe 'main program' do
     stdout, _stderr, _status = Open3.capture3('ruby', 'lib/main.rb', 'Examples/hello_world.bf')
     expect(stdout).to eq("Hello World!\n")
   end
-  
+
   it 'Prints the correct output for the fibonacci brainfuck example' do
     stdout, _stderr, _status = Open3.capture3('ruby', 'lib/main.rb', 'Examples/fibonacci.bf')
-    expect(stdout).to eq("1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89")
+    expect(stdout).to eq('1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89')
   end
 
   it 'Prints the correct output for the cell_size brainfuck example' do

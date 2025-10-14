@@ -96,7 +96,7 @@ If you want to report an issue, fix a bug, add a new feature, refactor a portion
 
 ### Acknowledgements
 
-Brainfuck-Ruby was built while reading th book [Computer Science From Scratch](https://github.com/davecom/ComputerScienceFromScratch) by [David Kopec](https://github.com/davecom).  
+Brainfuck-Ruby was built while reading the book [Computer Science From Scratch](https://github.com/davecom/ComputerScienceFromScratch) by [David Kopec](https://github.com/davecom).  
 Many thanks to him for inspiring me to build it. It was a really good way to learn more about low-level logic, to discover how an interpreter works and the weirdo language that is Brainfuck.    
 The source code initially written in Python was adapted for the Ruby programming language.  
 All Brainfuck examples are either from [esolang.org](https://esolangs.org/wiki/Brainfuck) or [esoteric.sange.fi](http://esoteric.sange.fi/brainfuck/bf-source/prog/).

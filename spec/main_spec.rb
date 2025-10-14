@@ -1,20 +1,15 @@
 # frozen_string_literal: true
 
-require 'open3'
+require_relative '../lib/brainfuck'
 
-RSpec.describe 'main program' do
-  it 'Prints the correct output for the hello world brainfuck example' do
-    stdout, _stderr, _status = Open3.capture3('ruby', 'lib/main.rb', 'Examples/hello_world.bf')
-    expect(stdout).to eq("Hello World!\n")
+RSpec.describe Brainfuck do
+  it 'Instanciates correctly the Brainfuck class' do
+    brainfuck = Brainfuck.new('Examples/hello_world.bf')
+    expect(brainfuck).to be_an_instance_of(Brainfuck)
   end
-
-  it 'Prints the correct output for the fibonacci brainfuck example' do
-    stdout, _stderr, _status = Open3.capture3('ruby', 'lib/main.rb', 'Examples/fibonacci.bf')
-    expect(stdout).to eq('1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89')
-  end
-
-  it 'Prints the correct output for the cell_size brainfuck example' do
-    stdout, _stderr, _status = Open3.capture3('ruby', 'lib/main.rb', 'Examples/cell_size.bf')
-    expect(stdout).to eq("8 bit cells\n")
+  it 'Prints the correct output for each brainfuck example' do
+    expect { Brainfuck.new('Examples/hello_world.bf').execute }.to output("Hello World!\n").to_stdout
+    expect { Brainfuck.new('Examples/fibonacci.bf').execute }.to output("1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89").to_stdout
+    expect { Brainfuck.new('Examples/cell_size.bf').execute }.to output("8 bit cells\n").to_stdout
   end
 end
